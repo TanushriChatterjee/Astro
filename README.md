@@ -4,7 +4,7 @@ To run the project: -
 2. cd backend
 3. npm i
 4. npm run dev
-5. For frontend
+5. For frontend:-
 6. cd frontend
 7. remove @mui/styles dependency from package.json (as it will cause conflicts)
 8. npm i
