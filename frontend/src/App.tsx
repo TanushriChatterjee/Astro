@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import { store } from "./store/store";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
               <Route path="/" element={<AstrologerForm />} />
               <Route path="/astrologers" element={<AstrologersList />} />
               <Route path="/astrologers/:id" element={<AstrologerEditForm />} />
+              <Route path="*" element={<PageNotFound />} />
             </Routes>
           </BrowserRouter>
           <Footer />
