@@ -1,0 +1,267 @@
+/* AstrologerForm.css */
+
+.astrologer-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.astrologer-form {
+  width: 100%;
+  max-width: 700px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fed7aa;
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.astrologer-form label {
+  display: flex;
+  margin-right: 10px;
+  width: 80px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.astrologer-form input,
+.astrologer-form select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #f1f5f9;
+  border-radius: 10px; /* Add corner radius */
+  box-shadow: 0 7px 7px rgba(0, 0, 0, 0.1);
+  background-color: #f0f9ff;
+  outline: none;
+}
+
+.astrologer-form input:focus-visible,
+.astrologer-form select:focus-visible {
+  border: none;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
+}
+
+.error-container {
+  display: block;
+  text-align: center;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: absolute;
+  max-height: 90px;
+  overflow-y: auto;
+  border-top: none;
+  background-color: #ecfeff;
+  z-index: 1;
+  border-radius: 2px;
+  width: 80%;
+  margin-left: 30px;
+  padding: 5px;
+}
+
+/* Style the scrollbar track */
+.checkbox-group::-webkit-scrollbar {
+  width: 0;
+}
+
+.checkbox-option {
+  display: flex;
+}
+
+.checkbox-option input {
+  margin-right: 20px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-trigger {
+  padding: 10px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-left: 30px;
+  margin-bottom: 15px;
+}
+
+.dropdown-option {
+  display: inline;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.drop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.astrologer-form .dropdown-trigger {
+  padding: 10px;
+  background-color: #ecfeff;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.astrologer-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.submit-button {
+  background-color: #475569;
+  color: #fff;
+  margin-top: 10px;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  /* margin-left: 250px; */
+}
+
+.submit-button:hover {
+  background-color: green; 
+  transform: scale(1.2); 
+}
+
+/* Additional styles for active state */
+.submit-button:active {
+  background-color: #555; 
+  transform: scale(1); 
+}
+
+@media only screen and (max-width: 600px) {
+  .heading {
+    font-weight: 900;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .astrologer-form label,
+  .astrologer-form input,
+  .astrologer-form select {
+    font-size: 14px;
+  }
+  .astrologer-form {
+    width: 350px;
+    padding: 40px;
+  }
+  label {
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-weight: 900;
+  }
+  .astrologer-form {
+    width: 90%;
+    padding: 40px;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  label {
+    margin-bottom: 18px;
+    font-weight: 500;
+    font-size: 18px;
+    padding-top: 10px;
+  }
+  .drop {
+    margin-top: 80px;
+    justify-content: space-around;
+  }
+  .submit-button {
+    margin-left: 40%;
+  }
+}
+
+@media (max-width: 600px) {
+  .heading {
+    font-size: 16px;
+    font-weight: 900;
+  }
+  .astrologer-form {
+    width: 90%;
+    padding: 40px;
+  }
+  .dropdown-trigger {
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left: 18px;
+    margin-bottom: 15px;
+  }
+  .submit-button {
+    margin-left: 30%;
+  }
+  label {
+    font-weight: 500;
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .heading {
+    font-weight: 900;
+  }
+  .astrologer-form {
+    width: 90%;
+    padding: 40px;
+  }
+  .form-group {
+    margin-top: 40px;
+  }
+  .drop {
+    display: flex;
+    align-items: center;
+    justify-content: flex-around;
+    gap: 10px;
+  }
+  .dropdown-trigger {
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left: 18px;
+    margin-top: 20px;
+  }
+  .submit-button {
+    margin-top: 40px;
+    margin-left: 40%;
+  }
+  label {
+    font-weight: 500;
+    font-size: 14px;
+  }
+}
