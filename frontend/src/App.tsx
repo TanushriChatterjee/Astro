@@ -12,7 +12,17 @@ function App() {
   return (
     <>
       <Provider store={store}>
-        <div className="App">
+        <div
+          className="App"
+          style={{
+            backgroundImage:
+              "url('https://fanaru.com/astrology-signs-and-arts/image/151007-astrology-signs-and-arts-zodiac-banner.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "100vh",
+          }}
+        >
           <Header />
           <BrowserRouter>
             <Routes>
